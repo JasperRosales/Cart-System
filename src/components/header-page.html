@@ -1,0 +1,110 @@
+<header class="bg-white shadow-sm">
+  <div
+    class="flex h-16 max-w-7xl mx-auto items-center justify-between px-4 sm:px-6 lg:px-8">
+    <a
+      href="#"
+      class="font-bold bg-linear-to-tl from-blue-600 to-violet-600 bg-clip-text text-transparent text-lg">
+      AsperTheGhost
+    </a>
+
+    <nav class="flex items-center gap-6 text-sm font-medium text-gray-800">
+      <a
+        href="#"
+        id="nav-home"
+        class="hover:text-blue-600 transition-colors duration-200"
+        >Home</a
+      >
+      <a
+        href="#"
+        id="nav-store"
+        class="hover:text-blue-600 transition-colors duration-200"
+        >Store</a
+      >
+
+      <button
+        command="show-modal"
+        commandfor="drawer"
+        class="hover:text-blue-600 transition-colors duration-200">
+        Cart
+      </button>
+    </nav>
+  </div>
+
+  <el-dialog>
+    <dialog
+      id="drawer"
+      aria-labelledby="drawer-title"
+      class="fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+      <el-dialog-backdrop
+        class="absolute inset-0 bg-gray-500/75 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+
+      <div
+        tabindex="0"
+        class="absolute inset-0 pl-10 focus:outline-none sm:pl-16">
+        <el-dialog-panel
+          class="ml-auto block size-full max-w-md transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
+          <div class="flex h-full flex-col overflow-y-auto bg-white shadow-xl">
+            <div
+              class="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+              <h2 id="drawer-title" class="text-lg font-semibold text-gray-900">
+                Shopping Cart
+              </h2>
+              <button
+                type="button"
+                command="close"
+                commandfor="drawer"
+                class="text-gray-500 hover:text-gray-700 transition-colors">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  class="size-6">
+                  <path
+                    d="M6 18 18 6M6 6l12 12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="flex-1 overflow-y-auto px-6 py-6">
+              <ul
+                id="cart-list"
+                role="list"
+                class="divide-y divide-gray-200"></ul>
+            </div>
+
+            <div class="border-t border-gray-200 px-6 py-4">
+              <div
+                class="flex justify-between text-base font-medium text-gray-900">
+                <p>Subtotal</p>
+                <p id="cart-subtotal">₱0.00</p>
+              </div>
+              <p class="mt-1 text-sm text-gray-500">
+                Shipping and taxes calculated at checkout.
+              </p>
+              <div class="mt-4">
+                <a
+                  href="#"
+                  id="checkout-btn"
+                  class="flex justify-center items-center rounded-md bg-indigo-600 px-6 py-3 text-base font-medium text-white hover:bg-indigo-700"
+                  >Checkout</a
+                >
+              </div>
+              <div class="mt-4 text-center">
+                <button
+                  type="button"
+                  command="close"
+                  commandfor="drawer"
+                  class="text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                  Continue Shopping &rarr;
+                </button>
+              </div>
+            </div>
+          </div>
+        </el-dialog-panel>
+      </div>
+    </dialog>
+  </el-dialog>
+</header>
