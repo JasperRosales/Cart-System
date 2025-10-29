@@ -1,4 +1,3 @@
-// src/js/item.js
 import { addToCart } from './cart.js';
 
 export function loadItems(containerSelector, products) {
